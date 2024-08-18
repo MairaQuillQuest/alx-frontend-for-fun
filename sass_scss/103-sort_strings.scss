@@ -1,8 +1,9 @@
-/* sorts $list_to_sort and prints the sorted list in debug output */
+$list_to_sort: john, anna, zoe, kim, felicia, carrie;
 
-/* sorts variable and prints to debug output */
-@import '103-sort_list';
+/* Sort the list */
+$list_to_sort: sort($list_to_sort);
 
+/* Print the sorted list to the debug output */
 @each $name in $list_to_sort {
-    @debug #{$name};
+    @debug $name;
 }
